@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">SelectPhotoDemo</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+<!-- File Authority for the photo picker -->
+    <string name="photo_file_provider_authority" translatable="false">com.it.fileprovider</string>
+    <string name="photoPickerNotFoundText" >No pictures are available on the phone.</string>
+    <string name="fileNotFoundText" >File can not Found on the phone.</string>
+</resources>

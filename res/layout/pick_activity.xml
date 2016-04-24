@@ -1,0 +1,29 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical" >
+
+    <ImageView
+        android:id="@+id/pick_iv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_launcher"
+        android:scaleType="center"
+        android:layout_marginTop="20dp"
+       />
+    <Button 
+        android:id="@+id/pick_gallery"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="相册"
+        />
+    <Button 
+        android:id="@+id/pick_capture"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="拍照"
+        />
+
+</LinearLayout>
