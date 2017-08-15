@@ -63,9 +63,9 @@ public class PickActivity extends Activity implements OnClickListener {
 	 * @param photoUri
 	 */
 	private void startTakePhotoActivity(Uri photoUri) {
-		final Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE, null);
-		PhotoUtils.addPhotoPickerExtras(intent, photoUri); //outputUri
-		startActivityForResult(intent, REQUEST_CODE_CAMERA_WITH_DATA);
+	      final Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE, null);
+	      PhotoUtils.addPhotoPickerExtras(intent, photoUri); //outputUri
+	      startActivityForResult(intent, REQUEST_CODE_CAMERA_WITH_DATA);
 	}
 
 	
@@ -74,10 +74,13 @@ public class PickActivity extends Activity implements OnClickListener {
 	 * @param photoUri
 	 */
 	private void startPickFromGalleryActivity(Uri photoUri) {
-		final Intent intent = new Intent(Intent.ACTION_GET_CONTENT, null);
-		intent.setType("image/*");
-		PhotoUtils.addPhotoPickerExtras(intent, photoUri);//outputUri
-		startActivityForResult(intent, REQUEST_CODE_PHOTO_PICKED_WITH_DATA);
+	     final Intent intent = new Intent(Intent.ACTION_GET_CONTENT, MediaStore.Images.Media.EXTERNAL_CONTENT_URI);
+	     PhotoUtils.addPhotoPickerExtras(intent, photoUri);
+            if (intent.resolveActivity(getPackageManager()) != null) {
+               startActivityForResult(intent, REQUEST_CODE_PHOTO_PICKED_WITH_DATA);
+            } else {
+                HnToastUtils.showCenterToast("找不到应用");
+            }
 	}
 
 	
