@@ -1,3 +1,3 @@
 ## A Simple ImagePicker 
 
-It's used System album and camera.
+It's used system album and camera.
